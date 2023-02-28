@@ -1,6 +1,6 @@
-import { Image, Navbar, Link, Spacer } from "@nextui-org/react";
-import { CometButton } from "@comet-labs/react";
-
+import { Image, Navbar, Link, Spacer, Button } from "@nextui-org/react";
+import { stitches, darkTheme } from "@/styles/stitches";
+import { auth, signInWithGoogle } from "../firebase";
 export default function Header() {
 	// Login handler
 	const loginHandler = (result) => {
@@ -27,10 +27,17 @@ export default function Header() {
 				</Navbar.Content>
 				<Navbar.Content>
 					<Navbar.Item>
-						<CometButton
-							action="login"
-							onLoginthis={loginHandler}
-						/>
+						<Button
+							flat
+							style={{
+								backgroundColor: stitches.theme.colors.amaranth,
+								color: "white",
+							}}
+							auto
+							onClick={signInWithGoogle}
+						>
+							Log In
+						</Button>
 					</Navbar.Item>
 				</Navbar.Content>
 			</Navbar>

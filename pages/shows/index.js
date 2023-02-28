@@ -2,9 +2,9 @@ import { Link } from "@nextui-org/react";
 import Header from "@/components/Header";
 import { darkTheme } from "@/styles/stitches";
 import useSWR from "swr";
-import Show from "@/components/Show";
+import Shows from "@/components/Shows";
 
-export default function Shows() {
+export default function ShowPage() {
 	// const { data, error } = useSWR("/api/shows", fetcher);
 
 	// if (error) return <div>failed to load</div>;
@@ -13,7 +13,7 @@ export default function Shows() {
 	return (
 		<div className={darkTheme}>
 			<Header></Header>
-			<Show></Show>
+			<Shows></Shows>
 			{/* <ul>
 				{data.map((show) => (
 					<li key={show.id}>
